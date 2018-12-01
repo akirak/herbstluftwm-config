@@ -1,0 +1,24 @@
+* Herbstluftwm Configuration
+This is my configuration of [[http://herbstluftwm.org/][herbstluftwm]], a manual tiling window manager for X11.
+
+This configuration follows the [[https://xmonad.org/][XMonad]]-style configuration but is written in Nim. 
+** Prerequisites
+You will need the following programs to use this configuration:
+
+- herbstluftwm
+- Nim >= 0.19
+- gxmessage
+** Installation
+Clone this repository to =~/.config/herbstluftwm=. 
+** Usage
+Once set, start herbstluftwm as usual. That is, you will probably want to create =~/.xinitrc= file with the following content:
+
+#+BEGIN_SRC shell
+exec herbstluftwm --locked
+#+END_SRC
+
+=autostart= script in the repository builds the configuration at startup. An error message is displayed if Nim fails to build the configuration.
+** Tweaking
+Edit =config.nim= to suit your need. After you finish it, reload your configuration as normal (~Mod-Shift-r~ by default).
+** License
+MIT License

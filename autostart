@@ -1,0 +1,10 @@
+#!/bin/sh
+
+log=$HOME/.herbstluftwm-build.log
+
+cd $(dirname $0)
+nimble build > ${log}
+if [ $? -gt 0 ]; then
+    gxmessage -wrap -file ${log}
+fi
+exec bin/config
